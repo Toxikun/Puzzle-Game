@@ -360,7 +360,7 @@ public class imgGame {
 					else {
 						actionLabel.setText(Integer.toString(res) +" Points Gained");
 						try {
-						    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+						    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 						    String query = "UPDATE player SET Score = Score + ? WHERE Player = ?";
 						    PreparedStatement pst = con.prepareStatement(query);
 						    
@@ -380,7 +380,7 @@ public class imgGame {
 					res = 14;
 					actionLabel.setText(Integer.toString(res) +" Points Lost");
 					try {
-					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 					    String query = "UPDATE player SET Score = Score - ? WHERE Player = ?";
 					    PreparedStatement pst = con.prepareStatement(query);
 					    
