@@ -57,7 +57,7 @@ public class scoresWindow {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
             Statement st = con.createStatement();
             String query = "select * from player order by player";
             ResultSet rs = st.executeQuery(query);
@@ -107,7 +107,7 @@ public class scoresWindow {
 
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
                     Statement st = con.createStatement();
                     String query = "select * from player order by player";
                     ResultSet rs = st.executeQuery(query);
