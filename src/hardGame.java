@@ -275,7 +275,7 @@ public class hardGame {
 		        String opName = opText.getText();
 		        boolean exists = false;
 
-                try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!")) {
+                try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password")) {
                     String query = "SELECT Player, Score FROM player WHERE Player = ?";
                     try (PreparedStatement stmt = con.prepareStatement(query)) {
                         stmt.setString(1, opName);
@@ -374,7 +374,7 @@ public class hardGame {
 						b8.getText().equals("8")) {
 					actionLabel.setText("30 Points Gained");
 					try {
-					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 					    String query = "UPDATE player SET Score = Score + ? WHERE Player = ?";
 					    PreparedStatement pst = con.prepareStatement(query);
 					    
@@ -389,7 +389,7 @@ public class hardGame {
 					    JOptionPane.showMessageDialog(null, "Somethings Went Wrong!", "Error", JOptionPane.ERROR_MESSAGE);
 					}
 					try {
-					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 					    String query = "UPDATE player SET Score = Score - ? WHERE Player = ?";
 					    PreparedStatement pst = con.prepareStatement(query);
 					    
@@ -407,7 +407,7 @@ public class hardGame {
 				else {
 					actionLabel.setText("30 Points Lost");
 					try {
-					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 					    String query = "UPDATE player SET Score = Score + ? WHERE Player = ?";
 					    PreparedStatement pst = con.prepareStatement(query);
 					    
@@ -422,7 +422,7 @@ public class hardGame {
 					    JOptionPane.showMessageDialog(null, "Somethings Went Wrong!", "Error", JOptionPane.ERROR_MESSAGE);
 					}
 					try {
-					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 					    String query = "UPDATE player SET Score = Score - ? WHERE Player = ?";
 					    PreparedStatement pst = con.prepareStatement(query);
 					    
@@ -563,7 +563,7 @@ public class hardGame {
 			checkButton.setEnabled(false);
 			actionLabel.setText("30 Points Lost");
 			try {
-			    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+			    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 			    String query = "UPDATE player SET Score = Score + ? WHERE Player = ?";
 			    PreparedStatement pst = con.prepareStatement(query);
 			    
@@ -578,7 +578,7 @@ public class hardGame {
 			    JOptionPane.showMessageDialog(null, "Somethings Went Wrong!", "Error", JOptionPane.ERROR_MESSAGE);
 			}
 			try {
-			    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+			    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 			    String query = "UPDATE player SET Score = Score - ? WHERE Player = ?";
 			    PreparedStatement pst = con.prepareStatement(query);
 			    
