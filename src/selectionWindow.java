@@ -63,7 +63,7 @@ public class selectionWindow {
 					
 					try {
 						ser = 9;
-					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 					    String query = "UPDATE player SET Score = Score - ? WHERE Player = ?";
 					    PreparedStatement pst = con.prepareStatement(query);
 					    
@@ -89,7 +89,7 @@ public class selectionWindow {
 					d4Game.frame.setLocation(x, y);
 					try {
 						ser = 16;
-					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+					    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 					    String query = "UPDATE player SET Score = Score - ? WHERE Player = ?";
 					    PreparedStatement pst = con.prepareStatement(query);
 					    
@@ -146,7 +146,7 @@ public class selectionWindow {
 				imgGame.frame.setLocation(x, y);
 				try {
 					ser = 20;
-				    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+				    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 				    String query = "UPDATE player SET Score = Score - ? WHERE Player = ?";
 				    PreparedStatement pst = con.prepareStatement(query);
 				    
