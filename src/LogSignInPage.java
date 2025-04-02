@@ -59,7 +59,7 @@ public class LogSignInPage {
 		signBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-		            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!");
+		            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password");
 		            nickName = newNickText.getText();
 		            if(nickName.length() > 20 | nickName.length() < 3) {
 		            	JOptionPane.showMessageDialog(null, "A nick name must be at least 3 up to 20 character!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -97,7 +97,7 @@ public class LogSignInPage {
                 nickName = nickText.getText();
                 boolean exists = false;
 
-                try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cmpe114", "root", "377TFLDoruk!")) {
+                try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:AAAA/cmpe114", "root", "password")) {
                     String query = "SELECT Player, Score FROM player WHERE Player = ?";
                     try (PreparedStatement stmt = con.prepareStatement(query)) {
                         stmt.setString(1, nickName);
